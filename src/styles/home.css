@@ -1,0 +1,28 @@
+a {
+  color: white;
+}
+a:hover {
+  color: rgb(129, 30, 210);
+}
+
+nav {
+  margin-bottom: 0;
+}
+
+.navbar-light .navbar-brand {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+
+span {
+  text-decoration: none;
+}
+.navbar-light .navbar-brand:hover {
+  color: white;
+}
+
+body {
+  background-image: url(https://wallpapers.com/images/hd/pink-tropical-leaves-aesthetic-tablet-tgqza84jgwb6dva8.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
