@@ -4,11 +4,13 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
 import { ContactList } from "./views/ContactList";
-import { contactView, Single } from "./views/contactView";
+import { ContactView, Single } from "./views/ContactView";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { AddContact } from "./views/AddContact";
+import { CardContact } from "./component/CardContact";
 
 //create your first component
 const AppRouter = () => {
@@ -23,8 +25,9 @@ const AppRouter = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/contactlist" element={<contactList />} />
-            <Route path="/contactview/:theid" element={<contactView />} />
+            <Route path="/contactlist" element={<ContactList />} />
+            <Route path="/addcontact" element={<AddContact />} />
+            <Route path="/cardcontact/:theid" element={<CardContact />} />
             <Route path="*" element={<h1>Not found!</h1>} />
           </Routes>
           <Footer />

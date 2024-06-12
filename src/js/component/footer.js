@@ -10,10 +10,7 @@ import React, { Component } from "react";
 );*/
 export const Footer = () => {
   return (
-    <nav
-      className="navbar bg-body-tertiary navbar bg-dark sticky-bottom mt-4 mb-0"
-      data-bs-theme="dark"
-    >
+    <nav className="navbar fixed-bottom bg-body-tertiary" data-bs-theme="dark">
       <div className="container-fluid justify-content-center">
         <a
           className="navbar-brand"

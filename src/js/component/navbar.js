@@ -9,11 +9,10 @@ export const Navbar = () => {
       </Link>
       <div className="ml-auto mx-1 p-1">
         <Link to="/contactlist">
-          <button className="btn btn-primary mx-2">Contact List</button>
+          <button className="btn btn-warning mx-2">Contact List</button>
         </Link>
-        <Link to="/contactview/">
-          {" "}
-          <button className="btn btn-primary">Contact</button>
+        <Link to="/addcontact/">
+          <button className="btn btn-warning">Add Contact</button>
         </Link>
       </div>
     </nav>

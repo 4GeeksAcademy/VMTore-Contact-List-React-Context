@@ -1,3 +1,27 @@
+body {
+  background-image: url(https://cdn.wallpaperdirect.com/asset/img/product/209730/tiled/albany-distinctive-rustic-brick-silver-wallpaper-tiled-209730.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  object-fit: contain;
+}
+
+h1 {
+  font-size: 100px;
+  color: rgb(231, 194, 29);
+}
+
+h2 {
+  color: rgb(231, 194, 29);
+}
+p {
+  font-size: 40px;
+  color: rgb(255, 210, 8);
+}
+
+i {
+  font-size: 80px;
+}
+
 a {
   color: white;
 }
@@ -14,15 +38,18 @@ nav {
   text-decoration: none;
 }
 
-span {
-  text-decoration: none;
-}
 .navbar-light .navbar-brand:hover {
   color: white;
 }
 
-body {
-  background-image: url(https://wallpapers.com/images/hd/pink-tropical-leaves-aesthetic-tablet-tgqza84jgwb6dva8.jpg);
-  background-attachment: fixed;
-  background-size: cover;
+.navbar-light a {
+  text-decoration: none;
+}
+
+form {
+  color: rgb(231, 194, 29);
+}
+
+i.far.fa-id-card {
+  font-size: 30px;
 }

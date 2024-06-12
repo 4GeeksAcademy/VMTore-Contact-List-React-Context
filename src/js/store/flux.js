@@ -1,30 +1,47 @@
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
-      demo: [
+      contacts: [
         {
           name: "name",
           email: "email",
           phone: "phone",
           adress: "adress",
-          rrss: "rrss",
-        },
-        {
-          title: "SECOND",
-          background: "white",
-          initial: "white",
         },
       ],
     },
     actions: {
       // Use getActions to call a function within a fuction
-      exampleFunction: () => {
-        getActions().changeColor(0, "green");
-      },
-      loadContactList: () => {
-        /**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-	  }*/
+
+      loadContactList: async () => {
+        try {
+          const response = await fetch(
+            "https://playground.4geeks.com/contact/agendas?offset=0&limit=100",
+            {
+              method: "GET",
+              headers: { accept: "aplication/json" },
+            }
+          );
+          const data = await response.json();
+          console.log(data);
+        } catch (error) {
+          console.log(error);
+        }
+        const createUser = async () => {
+          try {
+            const response = await fetch(
+              "https://playground.4geeks.com/contact/agendas/VeroMT",
+              {
+                method: "POST",
+                headers: { accept: "application/json" },
+              }
+            );
+            const data = await response.json();
+            console.log(data);
+          } catch (error) {
+            console.log(error);
+          }
+        };
         const consultContactList = async () => {
           try {
             const response = await fetch(
@@ -40,7 +57,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             console.log(error);
           }
         };
-      
+      },
       changeColor: (index, color) => {
         //get the store
         const store = getStore();
