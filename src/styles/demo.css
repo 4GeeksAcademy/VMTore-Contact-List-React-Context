@@ -1,0 +1,14 @@
+.btn-group {
+  height: 30%;
+  width: 30%;
+  margin-left: 5px;
+  padding: 5px;
+}
+
+.fa-edit {
+  padding: 5px;
+}
+
+.fa-trash-alt {
+  padding: 5px;
+}
