@@ -93,19 +93,22 @@ const getState = ({ getStore, getActions, setStore }) => {
       createNewContact: async (list) => {
         const store = getStore();
         const actions = getActions();
-        //console.log(slug);
+        console.log(store);
         try {
           const response = await fetch(
             `https://playground.4geeks.com/contact/agendas/${store.username}/contacts`,
             {
               method: "POST",
-              headers: { accept: "application/json" },
+              headers: {
+                accept: "application/json",
+                "Content-Type": "application/json",
+              },
 
               body: JSON.stringify(list),
             }
           );
           const data = await response.json();
-          setStore("");
+          getStore("");
           console.log(data);
         } catch (error) {
           console.log(error);
@@ -127,11 +130,19 @@ const getState = ({ getStore, getActions, setStore }) => {
                 accept: "application/json",
                 "Content-Type": "application/json",
               },
-              body: JSON.stringify(editedCard),
+              body: JSON.stringify(id),
             }
           );
+          const updatedCard = await response.json();
+          console.log(updatedCard);
+          const editList = store.contacts.map((contact) =>
+            contact.id === id ? updatedCard : contact
+          );
+          setStore({ contacts: editList });
+          actions.getUserContacts();
         } catch (error) {
           console.log(error);
+          alert("No se ha podido editar el contacto");
         }
       },
 

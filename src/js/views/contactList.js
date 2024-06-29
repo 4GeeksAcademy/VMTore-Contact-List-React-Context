@@ -14,9 +14,6 @@ export const ContactList = () => {
         <CardContact />
       </ul>
       <br />
-      <Link to="/">
-        <button className="btn btn-warning">Back home</button>
-      </Link>
     </div>
   );
 };

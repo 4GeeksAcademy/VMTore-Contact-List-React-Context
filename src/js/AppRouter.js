@@ -28,7 +28,17 @@ const AppRouter = () => {
             <Route path="/contactlist" element={<ContactList />} />
             <Route path="/addcontact" element={<AddContact />} />
             <Route path="/cardcontact/:theid" element={<CardContact />} />
-            <Route path="*" element={<h1>Not found!</h1>} />
+            <Route
+              path="*"
+              element={
+                <>
+                  <h1 className="mx-auto ms-auto not-found">
+                    An error ocurred, page not found!
+                  </h1>
+                  <h5>Click on "My Contact List App" to go back Home</h5>
+                </>
+              }
+            />
           </Routes>
           <Footer />
         </ScrollToTop>

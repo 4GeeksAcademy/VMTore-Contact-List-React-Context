@@ -13,13 +13,19 @@ h1 {
 h2 {
   color: rgb(231, 194, 29);
 }
+
+h5 {
+  color: rgb(231, 194, 29);
+  margin-left: 30px;
+}
+
 p {
   font-size: 40px;
   color: rgb(255, 210, 8);
 }
 
 i {
-  font-size: 80px;
+  font-size: 20px;
 }
 
 a {
@@ -33,6 +39,9 @@ nav {
   margin-bottom: 0;
 }
 
+.top-nav {
+  margin-bottom: 30px;
+}
 .navbar-light .navbar-brand {
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
@@ -52,4 +61,32 @@ form {
 
 i.far.fa-id-card {
   font-size: 30px;
+}
+
+.card {
+  background-color: rgba(128, 128, 128, 0.767);
+  border-radius: 0.25rem;
+  border-color: #ffc107;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.fa-user-alt {
+  font-size: 100px;
+  margin: 40px;
+}
+
+.fa-bug {
+  font-size: 60px;
+}
+
+.fa-mobile-alt {
+  font-size: 27px;
+}
+
+.not-found {
+  display: flex;
+  justify-items: center !important;
+  font-size: 80px;
+  padding: 30px;
 }
