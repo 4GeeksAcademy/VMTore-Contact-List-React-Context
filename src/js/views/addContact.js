@@ -97,6 +97,15 @@ export const AddContact = () => {
             </button>
           </Link>
 
+          <Link to="/addcontact/:id">
+            <button
+              onClick={() => actions.uploadData(dataContact)}
+              type="button"
+              className="btn btn-warning"
+            >
+              Edit contact
+            </button>
+          </Link>
           <button type="submit" className="btn btn-warning">
             Add
           </button>

@@ -7,7 +7,7 @@ export const Navbar = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <nav className="navbar navbar-light fixed-top top-nav bg-dark mb-5">
+    <nav className="navbar navbar-light top-nav bg-dark mb-5">
       <Link to="/">
         <h1 className="navbar-brand mb-0 p-2 h1">My Contact List App</h1>
       </Link>

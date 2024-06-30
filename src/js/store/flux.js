@@ -35,7 +35,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         const store = getStore();
         const actions = getActions();
         setStore({ contacts: [...store.contacts, data] });
-        actions.createNewContact(data);
+        actions.editContact(data);
       },
 
       //Volcando lista de contactos
@@ -117,7 +117,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
       //Editando contacto
 
-      editContact: async (id) => {
+      editContact: async (id, editedCard) => {
         const store = getStore();
         const actions = getActions();
         console.log("Contacto editado");
@@ -130,7 +130,7 @@ const getState = ({ getStore, getActions, setStore }) => {
                 accept: "application/json",
                 "Content-Type": "application/json",
               },
-              body: JSON.stringify(id),
+              body: JSON.stringify(editedCard),
             }
           );
           const updatedCard = await response.json();
@@ -139,7 +139,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             contact.id === id ? updatedCard : contact
           );
           setStore({ contacts: editList });
-          actions.getUserContacts();
+          actions.consultContactList();
         } catch (error) {
           console.log(error);
           alert("No se ha podido editar el contacto");
@@ -161,7 +161,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             }
           );
           if (response.ok) {
-            const newListContacts = store.listContacts.filter(
+            const newListContacts = store.contacts.filter(
               (contact) => contact.id !== id
             );
             setStore({

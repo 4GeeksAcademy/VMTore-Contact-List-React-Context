@@ -27,7 +27,8 @@ const AppRouter = () => {
             <Route path="/" element={<Home />} />
             <Route path="/contactlist" element={<ContactList />} />
             <Route path="/addcontact" element={<AddContact />} />
-            <Route path="/cardcontact/:theid" element={<CardContact />} />
+            <Route path="/addcontact/:id" element={<AddContact />} />
+            <Route path="/cardcontact/:id" element={<CardContact />} />
             <Route
               path="*"
               element={

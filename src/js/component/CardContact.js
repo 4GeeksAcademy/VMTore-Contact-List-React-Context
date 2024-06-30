@@ -55,13 +55,15 @@ export function CardContact() {
                 </p>
               </div>
               <div className="ms-5 mx-3 d-flex gap-2">
-                <button
-                  type="button"
-                  className="btn btn-dark"
-                  onClick={() => handleClick(contact.id)}
-                >
-                  <i className="far fa-edit"></i>
-                </button>
+                <Link to="/addcontact/:id">
+                  <button
+                    type="button"
+                    className="btn btn-dark"
+                    onClick={() => handleClick(contact.id)}
+                  >
+                    <i className="fas fa-marker"></i>
+                  </button>
+                </Link>
                 <button
                   type="button"
                   className="btn btn-warning"
