@@ -12,11 +12,17 @@ h1 {
 
 h2 {
   color: rgb(231, 194, 29);
+  font-size: 50px;
 }
 
 h5 {
   color: rgb(231, 194, 29);
   margin-left: 30px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: 400;
 }
 
 p {

@@ -97,18 +97,24 @@ export const AddContact = () => {
             </button>
           </Link>
 
-          <Link to="/addcontact/:id">
+          <div>
+            <Link to="/addcontact/:id">
+              <button
+                onClick={() => actions.editContact(dataContact)} //Revisar el parámetro de editContact => Unprocessable Entity
+                type="button"
+                className="btn btn-warning ms-2"
+              >
+                Edit contact
+              </button>
+            </Link>
             <button
               onClick={() => actions.uploadData(dataContact)}
-              type="button"
-              className="btn btn-warning"
+              type="submit"
+              className="btn btn-warning ms-2"
             >
-              Edit contact
+              Add
             </button>
-          </Link>
-          <button type="submit" className="btn btn-warning">
-            Add
-          </button>
+          </div>
         </div>
       </form>
     </>

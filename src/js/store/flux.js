@@ -35,7 +35,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         const store = getStore();
         const actions = getActions();
         setStore({ contacts: [...store.contacts, data] });
-        actions.editContact(data);
+        //actions.createNewContact(data);
       },
 
       //Volcando lista de contactos
@@ -120,7 +120,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       editContact: async (id, editedCard) => {
         const store = getStore();
         const actions = getActions();
-        console.log("Contacto editado");
+
         try {
           const response = await fetch(
             `https://playground.4geeks.com/contact/agendas/${store.username}/contacts/${id}`,
@@ -133,6 +133,7 @@ const getState = ({ getStore, getActions, setStore }) => {
               body: JSON.stringify(editedCard),
             }
           );
+          console.log(editedCard);
           const updatedCard = await response.json();
           console.log(updatedCard);
           const editList = store.contacts.map((contact) =>

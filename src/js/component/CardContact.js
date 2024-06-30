@@ -10,8 +10,9 @@ export function CardContact() {
   const params = useParams();
   const handleClick = (id) => {
     console.log(store.dataCard.name);
+    console.log(id);
 
-    navigate(`/editContact/${id}`);
+    navigate(`/addContact/${id}`);
   };
 
   return (
