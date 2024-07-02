@@ -8,7 +8,7 @@ import { ContactView, Single } from "./views/ContactView";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
-import { Footer } from "./component/footer";
+import { Footer } from "./component/Footer";
 import { AddContact } from "./views/AddContact";
 import { CardContact } from "./component/CardContact";
 

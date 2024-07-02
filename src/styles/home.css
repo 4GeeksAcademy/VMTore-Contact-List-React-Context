@@ -15,6 +15,11 @@ h2 {
   font-size: 50px;
 }
 
+h3 {
+  margin-left: 20px;
+  font-size: 35px;
+}
+
 h5 {
   color: rgb(231, 194, 29);
   margin-left: 30px;
@@ -27,7 +32,7 @@ label {
 
 p {
   font-size: 40px;
-  color: rgb(255, 210, 8);
+  color: #ffc107;
 }
 
 i {
@@ -37,8 +42,9 @@ i {
 a {
   color: white;
 }
+
 a:hover {
-  color: rgb(129, 30, 210);
+  color: #ffffff;
 }
 
 nav {
@@ -57,6 +63,10 @@ nav {
   color: white;
 }
 
+.navbar-light .navbar-brand:hover {
+  color: #ffc107;
+}
+
 .navbar-light a {
   text-decoration: none;
 }
@@ -69,6 +79,10 @@ i.far.fa-id-card {
   font-size: 30px;
 }
 
+.fa-thumbtack {
+  font-size: 25px;
+}
+
 .card {
   background-color: rgba(128, 128, 128, 0.767);
   border-radius: 0.25rem;
@@ -77,7 +91,11 @@ i.far.fa-id-card {
   margin-bottom: 10px;
 }
 
-.fa-user-alt {
+li {
+  box-shadow: 10px 10px 20px #000000;
+}
+
+.fa-user {
   font-size: 100px;
   margin: 40px;
 }
@@ -99,4 +117,23 @@ i.far.fa-id-card {
   justify-items: center !important;
   font-size: 80px;
   padding: 30px;
+}
+
+.btn-dark:hover {
+  box-shadow: 1px 1px 1px #ffc107;
+  border-color: #ffc107;
+}
+.btn-warning:hover {
+  box-shadow: 1px 1px 3px rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0);
+}
+
+.bloc-img {
+  width: 270px;
+  height: auto;
+}
+
+.form-control:focus {
+  box-shadow: 2px 2px 10px #000000;
+  border-color: #000000;
 }

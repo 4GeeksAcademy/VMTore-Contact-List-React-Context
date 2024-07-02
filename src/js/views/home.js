@@ -2,6 +2,7 @@ import { useContext } from "react";
 import React from "react";
 import "../../styles/home.css";
 import { Context } from "../store/appContext";
+import bloc from "../../img/bloc.png";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
@@ -12,15 +13,15 @@ export const Home = () => {
   };
 
   return (
-    <div className="d-flex justify-content-start mt-5 mx-4">
+    <div className="d-flex flex-column align-items-center mt-5">
       <h1>My Contact List App®</h1>
-      <div className="d-flex flex-column align-items-start">
-        <p className="mt-5 mx-4">
+      <div className="d-flex flex-column align-items-center mt-4">
+        <p className="text-center">
           All your contacts in the same place: safety, easy and intuitive!
         </p>
         <nav className="navbar bg-body-tertiary">
-          <div className="container-fluid">
-            <div className="input-group d-flex">
+          <div className="container-fluid d-flex justify-content-center">
+            <div className="input-group">
               <span className="input-group-text" id="basic-addon1">
                 <i className="far fa-id-card"></i>
               </span>
@@ -43,6 +44,7 @@ export const Home = () => {
           </div>
         </nav>
       </div>
+      <img className="mt-5 bloc-img" src={bloc} />
     </div>
   );
 };

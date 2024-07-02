@@ -27,11 +27,11 @@ export function CardContact() {
               className="card p-3 d-flex flex-row align-items-center"
             >
               <div className="me-3">
-                <i className="fas fa-user-alt"></i>
+                <i className="fas fa-user"></i>
               </div>
               <div className="flex-grow-1 mx-auto">
-                <h3 className="mb-1">
-                  <i className="fas fa-pen"></i>
+                <h3 className="mb-1 ml-2">
+                  <i className="fas fa-thumbtack"></i>
                   <span className="ms-2">
                     <strong>{contact.name}</strong>
                   </span>
@@ -56,7 +56,7 @@ export function CardContact() {
                 </p>
               </div>
               <div className="ms-5 mx-3 d-flex gap-2">
-                <Link to="/addcontact/:id">
+                <Link to={`/addcontact/${contact.id}`}>
                   <button
                     type="button"
                     className="btn btn-dark"
@@ -77,7 +77,11 @@ export function CardContact() {
           ))
         )}
       </ul>
-      <button className="btn btn-warning mt-3" onClick={() => navigate("/")}>
+      <button
+        className="btn btn-warning mt-3"
+        type="button"
+        onClick={() => navigate("/")}
+      >
         Back Home
       </button>
     </div>

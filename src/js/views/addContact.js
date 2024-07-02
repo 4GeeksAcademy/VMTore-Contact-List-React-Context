@@ -8,6 +8,7 @@ export const AddContact = () => {
   const params = useParams();
 
   const editCard = store.contacts.find((card) => card.id === Number(params.id));
+  const id = Number(params.id);
 
   const [dataContact, setDataContact] = useState({
     name: editCard?.name ?? "",
@@ -27,6 +28,12 @@ export const AddContact = () => {
   const handleAddContact = (event) => {
     event.preventDefault();
     actions.createNewContact(dataContact);
+    setDataContact({
+      name: "",
+      phone: "",
+      email: "",
+      address: "",
+    });
   };
 
   return (
@@ -100,7 +107,11 @@ export const AddContact = () => {
           <div>
             <Link to="/addcontact/:id">
               <button
-                onClick={() => actions.editContact(dataContact)} //Revisar el parámetro de editContact => Unprocessable Entity
+                onClick={() => {
+                  setDataContact(dataContact);
+                  console.log("Aqui data Contact" + dataContact);
+                  actions.editContact(id, dataContact);
+                }} //Revisar el parámetro de editContact => Unprocessable Entity
                 type="button"
                 className="btn btn-warning ms-2"
               >

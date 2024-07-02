@@ -38,7 +38,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         //actions.createNewContact(data);
       },
 
-      //Volcando lista de contactos
+      //Volcando lista de contactos => GET
 
       consultContactList: async () => {
         const store = getStore();
@@ -59,7 +59,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-      //Creando nueva agenda con nombre de usuario
+      //Creando nueva agenda con nombre de usuario => POST
 
       createUser: async (slug) => {
         console.log(slug);
@@ -75,6 +75,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           const data = await response.json();
           setStore("");
           console.log(data);
+          alert("Usuario creado");
         } catch (error) {
           console.log(error);
         }
@@ -88,7 +89,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         console.log(store.username);
       },
 
-      //Añadiendo nuevo contacto a la agenda
+      //Añadiendo nuevo contacto a la agenda => POST
 
       createNewContact: async (list) => {
         const store = getStore();
@@ -115,7 +116,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-      //Editando contacto
+      //Editando contacto => PUT
 
       editContact: async (id, editedCard) => {
         const store = getStore();
@@ -131,9 +132,9 @@ const getState = ({ getStore, getActions, setStore }) => {
                 "Content-Type": "application/json",
               },
               body: JSON.stringify(editedCard),
-            }
+            },
+            console.log(editedCard)
           );
-          console.log(editedCard);
           const updatedCard = await response.json();
           console.log(updatedCard);
           const editList = store.contacts.map((contact) =>
@@ -147,7 +148,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-      //Borrando contacto de la agenda
+      //Borrando contacto de la agenda => DELETE
 
       deleteContact: async (id) => {
         const store = getStore();
@@ -168,7 +169,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             setStore({
               contacts: newListContacts,
             });
-            console.log(store.listContacts);
+            console.log(store.contacts);
             alert("Se ha eliminado el contacto de tu agenda");
           }
         } catch (error) {
